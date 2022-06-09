@@ -6,13 +6,11 @@
     ansible.windows.win_find:
       paths: 'C:\Users\Administrateur\Desktop\'
     register: file_list
-  - name: 'Fetch the file from the WSUS server to master'
-    ansible.builtin.fetch:
-      src: '{{ item.path }}'
-      dest: 'C:\Users\MohamedAminNASRI\Desktop\'
-    with_items:
-    - file_list.files
+  # - name: 'Fetch the file from the WSUS server to master'
+  #   ansible.builtin.fetch:
+  #     src: '{{ item.path }}'
+  #     dest: 'C:\Users\MohamedAminNASRI\Desktop\'
+    with_items: file_list.files
   - debug: 
       msg: 'error with {{item}}'
-    with_items:
-    - file_list.files
+    with_items: file_list.files
