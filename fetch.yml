@@ -14,7 +14,7 @@
     with_items: 
     - "{{file_list.files}}"
   - debug: 
-      msg: "error with {{item}}"
+      msg: "error with {{item.filename}}"
     with_items: 
     - "{{file_list.files}}"
   - ansible.builtin.find:
