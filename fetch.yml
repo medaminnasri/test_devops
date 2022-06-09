@@ -4,7 +4,7 @@
   tasks:
   - name: show
     ansible.windows.win_find:
-      paths: 'C:\Users\MohamedAminNASRI\Desktop\'
+      paths: 'C:\Users\Administrateur\Desktop\'
   - name: 'Fetch the file from the WSUS server to master'
     ansible.builtin.fetch:
       src: '{{ item }}'
