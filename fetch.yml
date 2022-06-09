@@ -7,7 +7,7 @@
       src: '{{ item }}'
       dest: 'C:\Users\MohamedAminNASRI\Desktop\'
     with_fileglob:
-    - 'C:\Users\Administrateur\Desktop\*'
+    - 'C:\Users\Administrateur\Desktop\'
   - debug: 
       msg: 'error with {{item}}'
-    with_fileglob: 'C:\Users\Administrateur\Desktop\*'
+    with_fileglob: 'C:\Users\Administrateur\Desktop\'
