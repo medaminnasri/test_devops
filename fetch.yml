@@ -13,4 +13,5 @@
     # with_items: file_list.files
   - debug: 
       msg: "error with {{item}}"
-    with_items: file_list.files
+    with_items: 
+    - "{{file_list.files}}"
