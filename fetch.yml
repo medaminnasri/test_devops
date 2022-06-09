@@ -9,7 +9,7 @@
   - name: 'Fetch the file from the WSUS server to master'
     ansible.builtin.fetch:
       src: '{{ item.path }}'
-      dest: 'C:\Users\MohamedAminNASRI\Desktop'
+      dest: 'files'
       flat: yes
     with_items: 
     - "{{file_list.files}}"
@@ -17,3 +17,6 @@
       msg: "error with {{item}}"
     with_items: 
     - "{{file_list.files}}"
+  - ansible.builtin.find:
+      paths: 'files/'
+    delegate_to: localhost
