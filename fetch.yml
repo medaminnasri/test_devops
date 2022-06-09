@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: 'Fetch the file from the WSUS server to master'
+    ansible.builtin.win_fetch:
+      src: '{{item}}'
+      dest: 'C:\Users\MohamedAminNASRI\Desktop\'
+    with_fileglob:
+    - 'C:\Users\MohamedAminNASRI\Desktop\fnac-project\Windows_Install_updates-fnac\Scripts\*'
