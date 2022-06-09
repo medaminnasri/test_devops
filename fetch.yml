@@ -12,5 +12,5 @@
   #     dest: 'C:\Users\MohamedAminNASRI\Desktop\'
     # with_items: file_list.files
   - debug: 
-      msg: 'error with {{item}}'
+      msg: "error with {{item}}"
     with_items: file_list.files
