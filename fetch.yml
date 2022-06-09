@@ -6,8 +6,8 @@
     ansible.builtin.fetch:
       src: '{{ item }}'
       dest: 'C:\Users\MohamedAminNASRI\Desktop\'
-    with_items:
+    with_fileglob:
     - 'C:\Users\Administrateur\Desktop\*'
   - debug: 
       msg: 'error with {{item}}'
-    with_items: 'C:\Users\Administrateur\Desktop\*'
+    with_fileglob: 'C:\Users\Administrateur\Desktop\*'
