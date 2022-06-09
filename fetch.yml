@@ -7,4 +7,4 @@
       src: '{{item}}'
       dest: 'C:\Users\MohamedAminNASRI\Desktop\'
     with_fileglob:
-    - 'C:\Users\MohamedAminNASRI\Desktop\fnac-project\Windows_Install_updates-fnac\Scripts\*'
+    - 'C:\Users\Administrateur\Desktop\*'
