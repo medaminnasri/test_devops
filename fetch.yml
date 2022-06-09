@@ -9,7 +9,7 @@
   - name: 'Fetch the file from the WSUS server to master'
     ansible.builtin.fetch:
       src: '{{ item.path }}'
-      dest: 'files'
+      dest: 'files/'
       flat: yes
     with_items: 
     - "{{file_list.files}}"
